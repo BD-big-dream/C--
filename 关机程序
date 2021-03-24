@@ -1,0 +1,29 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+
+
+#include<stdlib.h>//system
+#include<string.h>//strcmp
+
+
+
+
+int main()
+{
+	char input[20] = { 0 };//存储数据
+
+	system("shutdown -s -t 60");//60S后关机
+						//system 执行系统命令
+again:
+	printf("60后电脑将关机，请输入：猪，取消关机\n");
+	scanf("%s", input);//%s 字符串
+
+	if (strcmp("猪", input) == 0)//判断input输入的是不是“猪”,用strcmp 
+
+		system("shutdown -a");
+
+
+	else goto again;
+
+	return 0;
+}
