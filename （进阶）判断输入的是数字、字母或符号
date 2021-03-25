@@ -1,0 +1,31 @@
+int main()
+{ 
+
+	int ch;
+again:
+	
+	printf("请任意输入： ");
+	ch = getchar();
+	
+	if (ch >= '0' && ch <= '9')
+	{
+		printf("你输入的是数字\n");
+		/*getchar();*/
+		while (getchar() != '\n') { ; }
+	}
+	else if (ch >= 'a'&& ch <= 'z' || ch >= 'A'&& ch <= 'Z')
+	{
+		printf("你输入的是字母\n");
+		/*getchar();*/
+		while (getchar() != '\n') { ; }
+	}
+	else
+	{
+		printf("你输入的是其他符号\n");
+		/*getchar();*/
+		while (getchar() != '\n') { ; }
+	}
+	goto again;
+	return 0;
+
+}
