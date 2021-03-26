@@ -1,0 +1,24 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+int sum(int a)
+{
+	int c = 0;
+	static int b = 3;//static在这里起到了循环中b的值会保留不被初始化！
+	c += 1;
+	b += 2;
+	return(a + b + c);
+}
+int main()
+{
+	int i;
+	int a = 2;
+	for (i = 0; i < 5; i++)
+	{
+		printf("%d ", sum(a));
+	}
+
+
+
+
+	return 0;
+}
