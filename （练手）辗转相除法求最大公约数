@@ -1,0 +1,21 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+int main()
+{
+	int m = 0;
+	int n = 0;
+	/*int r = 0;*/
+	
+	scanf("%d %d", &m, &n);
+
+	while(m % n != 0)    //也可以写成  while（m % n） 或 while（r = m % n）
+	{
+		int r = m % n;   //当写成while（r = m % n）时， int r= m % n 可省略 但要在循环之前定义变量 ‘r’
+		m = n;
+		n = r;
+	}
+
+	printf("%d", n);
+
+	return 0;
+}
